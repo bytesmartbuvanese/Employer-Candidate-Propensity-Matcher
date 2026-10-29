@@ -1,0 +1,12 @@
+feature,importance,importance_percentage
+experience_gap,0.25367293,25.367292
+skill_match_ratio,0.14922635,14.922635
+candidate_text_length,0.099786066,9.978606
+experience_years,0.08522638,8.522638
+candidate_skill_count,0.08205843,8.205843
+job_skill_count,0.071146704,7.1146703
+skill_overlap_count,0.06694356,6.6943564
+job_text_length,0.056309633,5.6309633
+required_experience_years,0.05331569,5.331569
+text_similarity,0.041927315,4.1927314
+experience_requirement_found,0.040386893,4.038689

@@ -1,0 +1,56 @@
+{
+    "selected_model": "XGBoost",
+    "selection_criteria": [
+        "ROC-AUC descending",
+        "PR-AUC descending",
+        "Brier score ascending"
+    ],
+    "features": [
+        "skill_overlap_count",
+        "skill_match_ratio",
+        "candidate_skill_count",
+        "job_skill_count",
+        "experience_years",
+        "candidate_text_length",
+        "job_text_length",
+        "text_similarity",
+        "required_experience_years",
+        "experience_gap",
+        "experience_requirement_found"
+    ],
+    "comparison": [
+        {
+            "model": "XGBoost",
+            "accuracy": 0.7888888888888889,
+            "precision": 0.8123011664899258,
+            "recall": 0.7606752730883813,
+            "f1_score": 0.7856410256410257,
+            "roc_auc": 0.8682123389102592,
+            "pr_auc": 0.8893301904042653,
+            "brier_score": 0.14706304262612144,
+            "log_loss": 0.45098149593424564
+        },
+        {
+            "model": "Random Forest",
+            "accuracy": 0.7878787878787878,
+            "precision": 0.8172972972972973,
+            "recall": 0.7507447864945382,
+            "f1_score": 0.782608695652174,
+            "roc_auc": 0.8664221977503824,
+            "pr_auc": 0.8888533453074199,
+            "brier_score": 0.14715117986289203,
+            "log_loss": 0.4497375104477538
+        },
+        {
+            "model": "Logistic Regression",
+            "accuracy": 0.7257575757575757,
+            "precision": 0.7217973231357553,
+            "recall": 0.7497517378351539,
+            "f1_score": 0.7355090112031174,
+            "roc_auc": 0.8004033430937191,
+            "pr_auc": 0.821096017259709,
+            "brier_score": 0.18299650785296645,
+            "log_loss": 0.5443363280597077
+        }
+    ]
+}

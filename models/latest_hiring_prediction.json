@@ -1,0 +1,43 @@
+{
+    "predicted_outcome": "Hired",
+    "hiring_propensity": 80.14,
+    "probability": 0.8014,
+    "classification_threshold": 0.5,
+    "candidate_skills": [
+        "automation testing",
+        "cypress",
+        "jenkins",
+        "python",
+        "selenium",
+        "sql"
+    ],
+    "job_required_skills": [
+        "aws",
+        "ci/cd",
+        "python",
+        "sql"
+    ],
+    "matched_skills": [
+        "python",
+        "sql"
+    ],
+    "unmatched_job_skills": [
+        "aws",
+        "ci/cd"
+    ],
+    "experience_years": 2.0,
+    "required_experience_years": null,
+    "feature_values": {
+        "skill_overlap_count": 2,
+        "skill_match_ratio": 0.5,
+        "candidate_skill_count": 6,
+        "job_skill_count": 4,
+        "experience_years": 2.0,
+        "candidate_text_length": 350,
+        "job_text_length": 1190,
+        "text_similarity": 0.17807610298760426,
+        "required_experience_years": null,
+        "experience_gap": null,
+        "experience_requirement_found": 0
+    }
+}

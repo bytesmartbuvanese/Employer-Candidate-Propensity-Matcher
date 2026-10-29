@@ -1,0 +1,46 @@
+TRAINING DATASET BUILD SUMMARY
+=======================================================
+
+Training rows: 8000
+Testing rows: 2000
+Number of features: 11
+Overlapping candidate-job pairs: 20
+
+FEATURES
+-------------------------------------------------------
+skill_overlap_count
+skill_match_ratio
+candidate_skill_count
+job_skill_count
+experience_years
+candidate_text_length
+job_text_length
+text_similarity
+required_experience_years
+experience_gap
+experience_requirement_found
+
+TRAIN TARGET DISTRIBUTION
+-------------------------------------------------------
+is_hired
+0    3916
+1    4084
+Name: count, dtype: int64
+
+TEST TARGET DISTRIBUTION
+-------------------------------------------------------
+is_hired
+0     992
+1    1008
+Name: count, dtype: int64
+
+MISSING VALUES AFTER IMPUTATION
+-------------------------------------------------------
+Train: 0
+Test: 0
+
+OUTPUT FILES
+-------------------------------------------------------
+/home/austin/algorithms/employer_candidate_propensity_matcher/data/processed/model_train.csv
+/home/austin/algorithms/employer_candidate_propensity_matcher/data/processed/model_test.csv
+/home/austin/algorithms/employer_candidate_propensity_matcher/data/processed/feature_config.json

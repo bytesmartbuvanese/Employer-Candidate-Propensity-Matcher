@@ -1,0 +1,33 @@
+RECRUITMENT DATA PREPROCESSING SUMMARY
+=================================================================
+
+Dataset: train
+---------------------------------------------
+dataset: train
+original_rows: 8000
+processed_rows: 8000
+duplicates_removed: 0
+missing_experience: 0
+hired: 4084
+not_hired: 3916
+output_file: /home/austin/algorithms/employer_candidate_propensity_matcher/data/processed/cleaned_train.csv
+
+Dataset: test
+---------------------------------------------
+dataset: test
+original_rows: 2000
+processed_rows: 2000
+duplicates_removed: 0
+missing_experience: 0
+hired: 1008
+not_hired: 992
+output_file: /home/austin/algorithms/employer_candidate_propensity_matcher/data/processed/cleaned_test.csv
+
+
+TARGET DEFINITION
+Accepted = 1 (Hired)
+Rejected = 0 (Not hired)
+
+LEAKAGE PREVENTION
+reason_for_result excluded from model inputs.
+result retained for auditing; use is_hired as target.

@@ -1,0 +1,30 @@
+{
+    "features": [
+        "skill_overlap_count",
+        "skill_match_ratio",
+        "candidate_skill_count",
+        "job_skill_count",
+        "experience_years",
+        "candidate_text_length",
+        "job_text_length",
+        "text_similarity",
+        "required_experience_years",
+        "experience_gap",
+        "experience_requirement_found"
+    ],
+    "target": "is_hired",
+    "imputation_medians": {
+        "skill_overlap_count": 0.0,
+        "skill_match_ratio": 0.0,
+        "candidate_skill_count": 1.0,
+        "job_skill_count": 1.0,
+        "experience_years": 5.0,
+        "candidate_text_length": 298.0,
+        "job_text_length": 218.0,
+        "text_similarity": 0.14496909238161426,
+        "required_experience_years": 3.0,
+        "experience_gap": 3.0,
+        "experience_requirement_found": 1.0
+    },
+    "scaling_required": false
+}

@@ -1,0 +1,1068 @@
+EMPLOYER-CANDIDATE PROPENSITY MATCHER
+DATASET ANALYSIS REPORT
+==========================================================================================
+Project directory: /home/austin/algorithms/employer_candidate_propensity_matcher/data
+Total expected datasets: 8
+
+[LOADED] candidate_matching_resumes: 10,000 rows x 9 columns
+
+==========================================================================================
+DATASET: candidate_matching_resumes
+==========================================================================================
+Rows: 10,000
+Columns: 9
+Duplicate rows: 0
+Memory usage: 4.54 MB
+
+--- COLUMN INFORMATION ---
+
+Column: resume_id
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 10,000
+  Possible role: TEXT_OR_PROFILE_INFORMATION
+
+Column: role
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 24
+  Possible role: OTHER_FEATURE
+
+Column: seniority
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 3
+  Possible role: EXPERIENCE
+  Value distribution:
+    Junior: 3372
+    Mid: 3365
+    Senior: 3263
+
+Column: years_experience
+  Type: int64
+  Missing: 0 (0.00%)
+  Unique values: 13
+  Possible role: EXPERIENCE
+  Value distribution:
+    2: 1757
+    6: 1161
+    1: 1129
+    0: 1123
+    3: 700
+    4: 671
+    5: 666
+    9: 509
+    11: 491
+    10: 453
+    7: 450
+    8: 447
+    12: 443
+
+Column: industry
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 10
+  Possible role: OTHER_FEATURE
+  Value distribution:
+    Retail: 1084
+    E-commerce: 1018
+    Gaming: 1018
+    SaaS: 1014
+    Logistics: 1012
+    Travel: 992
+    Cybersecurity: 968
+    EdTech: 967
+    Healthcare: 964
+    FinTech: 963
+
+Column: education
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 5
+  Possible role: EDUCATION
+  Value distribution:
+    BSc: 2071
+    MBA: 2031
+    MSc: 1980
+    BA: 1965
+    High School: 1953
+
+Column: skills
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 9,987
+  Possible role: SKILL_INFORMATION
+
+Column: summary
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 2,861
+  Possible role: OTHER_FEATURE
+
+Column: experience_bullets
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 1
+  Possible role: EXPERIENCE
+  Value distribution:
+    ['Delivered results using structured workflows and clear communication'
+ 'Collaborated with stakeholders to define needs and execute tasks'
+ 'Maintained reporting and documentation to support team performance']: 10000
+
+--- NUMERIC STATISTICS ---
+       years_experience
+count      10000.000000
+mean           4.627700
+std            3.603969
+min            0.000000
+25%            2.000000
+50%            4.000000
+75%            7.000000
+max           12.000000
+
+--- FIRST 5 ROWS ---
+resume_id                role seniority  years_experience   industry education                                                                             skills                                                     summary                                                                                                                                                                                                   experience_bullets
+ R_000000   Software Engineer    Senior                12     EdTech       BSc                  ['OOP' 'Databases' 'Git' 'Docker' 'Python' 'Unit Testing' 'Java']    Software Engineer with 12 years of experience in EdTech. ['Delivered results using structured workflows and clear communication'\n 'Collaborated with stakeholders to define needs and execute tasks'\n 'Maintained reporting and documentation to support team performance']
+ R_000001   Marketing Manager    Junior                 2 E-commerce       BSc ['Content Marketing' 'Meta Ads' 'Conversion Optimization' 'SEO'\n 'Landing Pages'] Marketing Manager with 2 years of experience in E-commerce. ['Delivered results using structured workflows and clear communication'\n 'Collaborated with stakeholders to define needs and execute tasks'\n 'Maintained reporting and documentation to support team performance']
+ R_000002 Full Stack Engineer       Mid                 6    FinTech        BA                           ['Databases' 'OOP' 'Git' 'Docker' 'JavaScript' 'Python']  Full Stack Engineer with 6 years of experience in FinTech. ['Delivered results using structured workflows and clear communication'\n 'Collaborated with stakeholders to define needs and execute tasks'\n 'Maintained reporting and documentation to support team performance']
+ R_000003        Data Analyst    Junior                 0 Healthcare       BSc         ['Excel' 'A/B Testing' 'Tableau' 'Pandas' 'Power BI' 'Data Visualization']      Data Analyst with 0 years of experience in Healthcare. ['Delivered results using structured workflows and clear communication'\n 'Collaborated with stakeholders to define needs and execute tasks'\n 'Maintained reporting and documentation to support team performance']
+ R_000004          BI Analyst    Junior                 0     Gaming        BA                                   ['Statistics' 'SQL' 'Power BI' 'Pandas' 'Excel']            BI Analyst with 0 years of experience in Gaming. ['Delivered results using structured workflows and clear communication'\n 'Collaborated with stakeholders to define needs and execute tasks'\n 'Maintained reporting and documentation to support team performance']
+
+--- POSSIBLE IDENTIFIER COLUMNS ---
+resume_id
+
+--- POSSIBLE MODEL TARGET COLUMNS ---
+No obvious target columns
+
+[LOADED] recruitment_data_train: 8,000 rows x 10 columns
+
+==========================================================================================
+DATASET: recruitment_data_train
+==========================================================================================
+Rows: 8,000
+Columns: 10
+Duplicate rows: 0
+Memory usage: 5.55 MB
+
+--- COLUMN INFORMATION ---
+
+Column: recruitment_date
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 2,236
+  Possible role: DATE_OR_TIME
+
+Column: opening_position
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 15
+  Possible role: OTHER_FEATURE
+  Value distribution:
+    Marketing Specialist: 593
+    Data Scientist: 562
+    Machine Learning Engineer: 562
+    Business Analyst: 551
+    UX/UI Designer: 549
+    Software Engineer: 532
+    Technical Support Specialist: 531
+    Frontend Developer: 528
+    Backend Developer: 523
+    HR Manager: 521
+    DevOps Engineer: 516
+    Accountant: 516
+    Product Manager: 511
+    QA Engineer: 508
+    Security Analyst: 497
+
+Column: description
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 15
+  Possible role: TEXT_OR_PROFILE_INFORMATION
+  Value distribution:
+    Develop and execute digital marketing campaigns to drive brand awareness and lead generation.: 593
+    Analyze large datasets to extract actionable insights and build predictive models.: 562
+    Design and implement machine learning applications and infrastructure.: 562
+    Bridge the gap between IT and business using data analytics to assess processes and determine requirements.: 551
+    Create intuitive user interfaces and engaging user experiences for web and mobile.: 549
+    Design and develop scalable web applications and microservices.: 532
+    Provide tier 2 technical support for software products and resolve customer issues.: 531
+    Build responsive and interactive web interfaces using modern JavaScript frameworks.: 528
+    Develop robust server-side logic, APIs, and database architecture.: 523
+    Oversee recruitment, employee relations, and performance management.: 521
+    Implement and maintain CI/CD pipelines, monitor system performance, and ensure reliability.: 516
+    Manage financial records, auditing, and tax compliance.: 516
+    Lead cross-functional teams to deliver high-quality software products.: 511
+    Design and execute automated and manual tests to ensure software quality.: 508
+    Monitor networks for security breaches, investigate violations, and implement security measures.: 497
+
+Column: requirement
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 15
+  Possible role: OTHER_FEATURE
+  Value distribution:
+    Bachelor's in Marketing, 2+ years experience with SEO/SEM and content strategy.: 593
+    Master's in Statistics or CS, 2+ years experience with ML frameworks, strong SQL.: 562
+    Master's in CS or AI, 3+ years experience deploying ML models to production.: 562
+    3+ years experience as a BA, strong analytical skills, experience with SQL and Tableau.: 551
+    Portfolio demonstrating strong design skills, 2+ years experience, Figma/Sketch proficiency.: 549
+    Bachelor's in CS, 3+ years experience with Python/Java, strong problem-solving skills.: 532
+    2+ years in IT support, excellent communication skills, troubleshooting expertise.: 531
+    Bachelor's in CS, 2+ years experience with React or Vue.js, strong CSS skills.: 528
+    3+ years experience with Node.js or Go, experience with RESTful APIs.: 523
+    Bachelor's in HR or related field, 5+ years experience in HR management.: 521
+    3+ years experience in DevOps, proficiency with AWS/Azure, Kubernetes.: 516
+    CPA or equivalent, 3+ years in corporate accounting.: 516
+    4+ years experience in product management, agile methodologies, strong leadership.: 511
+    2+ years experience in software testing, proficiency in Selenium or Cypress.: 508
+    Bachelor's in Cybersecurity, 3+ years experience, CISSP or CEH certification.: 497
+
+Column: keywords_for_recruitment
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 15
+  Possible role: OTHER_FEATURE
+  Value distribution:
+    ['SEO' 'SEM' 'Content Marketing' 'Google Analytics' 'Social Media']: 593
+    ['Python' 'Machine Learning' 'SQL' 'TensorFlow' 'Pandas' 'Statistics']: 562
+    ['Python' 'PyTorch' 'MLOps' 'Model Deployment' 'Deep Learning']: 562
+    ['Business Analysis' 'Requirements Gathering' 'Tableau' 'SQL'
+ 'Process Modeling']: 551
+    ['Figma' 'Sketch' 'Wireframing' 'Prototyping' 'User Research']: 549
+    ['Python' 'Java' 'Docker' 'Microservices' 'SQL' 'Git']: 532
+    ['Customer Support' 'Troubleshooting' 'Ticketing Systems' 'Communication']: 531
+    ['JavaScript' 'React' 'Vue.js' 'CSS' 'HTML' 'TypeScript']: 528
+    ['Node.js' 'Go' 'API Design' 'PostgreSQL' 'Redis' 'Backend']: 523
+    ['Recruitment' 'Employee Relations' 'Performance Management'
+ 'Communication']: 521
+    ['AWS' 'Kubernetes' 'CI/CD' 'Jenkins' 'Terraform' 'Linux']: 516
+    ['Excel' 'Auditing' 'Tax Compliance' 'Financial Reporting']: 516
+    ['Agile' 'Scrum' 'Roadmapping' 'Leadership' 'Jira']: 511
+    ['Selenium' 'Cypress' 'Testing' 'Automation' 'Bug Tracking']: 508
+    ['Cybersecurity' 'Network Security' 'Penetration Testing'
+ 'Risk Assessment']: 497
+
+Column: cv
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 7,965
+  Possible role: TEXT_OR_PROFILE_INFORMATION
+
+Column: experience_years
+  Type: int64
+  Missing: 0 (0.00%)
+  Unique values: 13
+  Possible role: EXPERIENCE
+  Value distribution:
+    3: 872
+    8: 839
+    7: 812
+    5: 790
+    9: 786
+    4: 775
+    6: 774
+    2: 704
+    1: 686
+    10: 494
+    0: 317
+    11: 105
+    12: 46
+
+Column: keywords_from_applicants
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 6,481
+  Possible role: OTHER_FEATURE
+
+Column: result
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 2
+  Possible role: OTHER_FEATURE
+  Value distribution:
+    Accepted: 4084
+    Rejected: 3916
+
+Column: reason_for_result
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 34
+  Possible role: OTHER_FEATURE
+
+--- NUMERIC STATISTICS ---
+       experience_years
+count       8000.000000
+mean           5.315125
+std            2.984281
+min            0.000000
+25%            3.000000
+50%            5.000000
+75%            8.000000
+max           12.000000
+
+--- FIRST 5 ROWS ---
+   recruitment_date opening_position                                                                                                 description                                                                                  requirement                                                            keywords_for_recruitment                                                                                                                                                                                                                                                                                                                                 cv  experience_years                                                                                        keywords_from_applicants   result                                                                            reason_for_result
+2025-11-19 00:00:00      QA Engineer                                   Design and execute automated and manual tests to ensure software quality.                 2+ years experience in software testing, proficiency in Selenium or Cypress.                        ['Selenium' 'Cypress' 'Testing' 'Automation' 'Bug Tracking']                                                       Highly motivated professional seeking the QA Engineer position. I bring 4 years of hands-on experience in the field. My core competencies include: Automation, Testing, Cypress, Bug Tracking, Selenium. My past achievements demonstrate my ability to exceed expectations.                 4                                                    ['Automation' 'Testing' 'Cypress' 'Bug Tracking' 'Selenium'] Accepted          Demonstrated exceptional problem-solving abilities during the technical assessment.
+2020-12-26 00:00:00  DevOps Engineer                 Implement and maintain CI/CD pipelines, monitor system performance, and ensure reliability.                       3+ years experience in DevOps, proficiency with AWS/Azure, Kubernetes.                          ['AWS' 'Kubernetes' 'CI/CD' 'Jenkins' 'Terraform' 'Linux']         Highly motivated professional seeking the DevOps Engineer position. I bring 10 years of hands-on experience in the field. My core competencies include: Jenkins, CI/CD, Terraform, Kubernetes, AWS, SAP, Public Speaking, React. I have successfully led projects and delivered results that align with your requirements.                10                            ['Jenkins' 'CI/CD' 'Terraform' 'Kubernetes' 'AWS' 'SAP' 'Public Speaking'\n 'React'] Accepted                            Showcased innovative thinking during the case study presentation.
+2021-01-22 00:00:00 Business Analyst Bridge the gap between IT and business using data analytics to assess processes and determine requirements.      3+ years experience as a BA, strong analytical skills, experience with SQL and Tableau. ['Business Analysis' 'Requirements Gathering' 'Tableau' 'SQL'\n 'Process Modeling'] Results-driven individual targeting a Business Analyst role. I have 5 years of relevant industry experience and strong expertise in Requirements Gathering, Process Modeling, Tableau, SQL, Business Analysis, Marketing, Data Analysis. I have successfully led projects and delivered results that align with your requirements.                 5 ['Requirements Gathering' 'Process Modeling' 'Tableau' 'SQL'\n 'Business Analysis' 'Marketing' 'Data Analysis'] Accepted                     Strong relevant experience and performed exceptionally in the interview.
+2023-11-07 00:00:00   UX/UI Designer                          Create intuitive user interfaces and engaging user experiences for web and mobile. Portfolio demonstrating strong design skills, 2+ years experience, Figma/Sketch proficiency.                      ['Figma' 'Sketch' 'Wireframing' 'Prototyping' 'User Research']                                   Highly motivated professional seeking the UX/UI Designer position. I bring 5 years of hands-on experience in the field. My core competencies include: Wireframing, Sketch, Prototyping, Figma, Leadership, C++. I am confident that my extensive experience makes me an ideal fit for this role.                 5                                               ['Wireframing' 'Sketch' 'Prototyping' 'Figma' 'Leadership' 'C++'] Accepted                            Showcased innovative thinking during the case study presentation.
+2024-03-31 00:00:00       Accountant                                                     Manage financial records, auditing, and tax compliance.                                         CPA or equivalent, 3+ years in corporate accounting.                         ['Excel' 'Auditing' 'Tax Compliance' 'Financial Reporting']                                  Results-driven individual targeting a Accountant role. I have 3 years of relevant industry experience and strong expertise in Auditing, Financial Reporting, Excel, Tax Compliance, Leadership, Public Speaking. I am confident that my extensive experience makes me an ideal fit for this role.                 3                    ['Auditing' 'Financial Reporting' 'Excel' 'Tax Compliance' 'Leadership'\n 'Public Speaking'] Accepted Highly recommended by previous employers and passed all screening stages with flying colors.
+
+--- POSSIBLE IDENTIFIER COLUMNS ---
+No obvious identifier columns
+
+--- POSSIBLE MODEL TARGET COLUMNS ---
+No obvious target columns
+
+[LOADED] recruitment_data_test: 2,000 rows x 10 columns
+
+==========================================================================================
+DATASET: recruitment_data_test
+==========================================================================================
+Rows: 2,000
+Columns: 10
+Duplicate rows: 0
+Memory usage: 1.38 MB
+
+--- COLUMN INFORMATION ---
+
+Column: recruitment_date
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 1,327
+  Possible role: DATE_OR_TIME
+
+Column: opening_position
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 15
+  Possible role: OTHER_FEATURE
+  Value distribution:
+    UX/UI Designer: 156
+    Product Manager: 152
+    Machine Learning Engineer: 148
+    Backend Developer: 145
+    Security Analyst: 141
+    DevOps Engineer: 137
+    QA Engineer: 136
+    Marketing Specialist: 136
+    Data Scientist: 135
+    Accountant: 129
+    Business Analyst: 126
+    HR Manager: 120
+    Software Engineer: 118
+    Frontend Developer: 111
+    Technical Support Specialist: 110
+
+Column: description
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 15
+  Possible role: TEXT_OR_PROFILE_INFORMATION
+  Value distribution:
+    Create intuitive user interfaces and engaging user experiences for web and mobile.: 156
+    Lead cross-functional teams to deliver high-quality software products.: 152
+    Design and implement machine learning applications and infrastructure.: 148
+    Develop robust server-side logic, APIs, and database architecture.: 145
+    Monitor networks for security breaches, investigate violations, and implement security measures.: 141
+    Implement and maintain CI/CD pipelines, monitor system performance, and ensure reliability.: 137
+    Design and execute automated and manual tests to ensure software quality.: 136
+    Develop and execute digital marketing campaigns to drive brand awareness and lead generation.: 136
+    Analyze large datasets to extract actionable insights and build predictive models.: 135
+    Manage financial records, auditing, and tax compliance.: 129
+    Bridge the gap between IT and business using data analytics to assess processes and determine requirements.: 126
+    Oversee recruitment, employee relations, and performance management.: 120
+    Design and develop scalable web applications and microservices.: 118
+    Build responsive and interactive web interfaces using modern JavaScript frameworks.: 111
+    Provide tier 2 technical support for software products and resolve customer issues.: 110
+
+Column: requirement
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 15
+  Possible role: OTHER_FEATURE
+  Value distribution:
+    Portfolio demonstrating strong design skills, 2+ years experience, Figma/Sketch proficiency.: 156
+    4+ years experience in product management, agile methodologies, strong leadership.: 152
+    Master's in CS or AI, 3+ years experience deploying ML models to production.: 148
+    3+ years experience with Node.js or Go, experience with RESTful APIs.: 145
+    Bachelor's in Cybersecurity, 3+ years experience, CISSP or CEH certification.: 141
+    3+ years experience in DevOps, proficiency with AWS/Azure, Kubernetes.: 137
+    2+ years experience in software testing, proficiency in Selenium or Cypress.: 136
+    Bachelor's in Marketing, 2+ years experience with SEO/SEM and content strategy.: 136
+    Master's in Statistics or CS, 2+ years experience with ML frameworks, strong SQL.: 135
+    CPA or equivalent, 3+ years in corporate accounting.: 129
+    3+ years experience as a BA, strong analytical skills, experience with SQL and Tableau.: 126
+    Bachelor's in HR or related field, 5+ years experience in HR management.: 120
+    Bachelor's in CS, 3+ years experience with Python/Java, strong problem-solving skills.: 118
+    Bachelor's in CS, 2+ years experience with React or Vue.js, strong CSS skills.: 111
+    2+ years in IT support, excellent communication skills, troubleshooting expertise.: 110
+
+Column: keywords_for_recruitment
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 15
+  Possible role: OTHER_FEATURE
+  Value distribution:
+    ['Figma' 'Sketch' 'Wireframing' 'Prototyping' 'User Research']: 156
+    ['Agile' 'Scrum' 'Roadmapping' 'Leadership' 'Jira']: 152
+    ['Python' 'PyTorch' 'MLOps' 'Model Deployment' 'Deep Learning']: 148
+    ['Node.js' 'Go' 'API Design' 'PostgreSQL' 'Redis' 'Backend']: 145
+    ['Cybersecurity' 'Network Security' 'Penetration Testing'
+ 'Risk Assessment']: 141
+    ['AWS' 'Kubernetes' 'CI/CD' 'Jenkins' 'Terraform' 'Linux']: 137
+    ['Selenium' 'Cypress' 'Testing' 'Automation' 'Bug Tracking']: 136
+    ['SEO' 'SEM' 'Content Marketing' 'Google Analytics' 'Social Media']: 136
+    ['Python' 'Machine Learning' 'SQL' 'TensorFlow' 'Pandas' 'Statistics']: 135
+    ['Excel' 'Auditing' 'Tax Compliance' 'Financial Reporting']: 129
+    ['Business Analysis' 'Requirements Gathering' 'Tableau' 'SQL'
+ 'Process Modeling']: 126
+    ['Recruitment' 'Employee Relations' 'Performance Management'
+ 'Communication']: 120
+    ['Python' 'Java' 'Docker' 'Microservices' 'SQL' 'Git']: 118
+    ['JavaScript' 'React' 'Vue.js' 'CSS' 'HTML' 'TypeScript']: 111
+    ['Customer Support' 'Troubleshooting' 'Ticketing Systems' 'Communication']: 110
+
+Column: cv
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 1,997
+  Possible role: TEXT_OR_PROFILE_INFORMATION
+
+Column: experience_years
+  Type: int64
+  Missing: 0 (0.00%)
+  Unique values: 13
+  Possible role: EXPERIENCE
+  Value distribution:
+    7: 232
+    9: 214
+    4: 212
+    8: 193
+    2: 184
+    5: 184
+    3: 174
+    6: 167
+    1: 161
+    10: 156
+    0: 83
+    11: 29
+    12: 11
+
+Column: keywords_from_applicants
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 1,797
+  Possible role: OTHER_FEATURE
+
+Column: result
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 2
+  Possible role: OTHER_FEATURE
+  Value distribution:
+    Accepted: 1008
+    Rejected: 992
+
+Column: reason_for_result
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 34
+  Possible role: OTHER_FEATURE
+
+--- NUMERIC STATISTICS ---
+       experience_years
+count       2000.000000
+mean           5.463000
+std            3.044218
+min            0.000000
+25%            3.000000
+50%            6.000000
+75%            8.000000
+max           12.000000
+
+--- FIRST 5 ROWS ---
+   recruitment_date   opening_position                                                                                 description                                                                        requirement                                     keywords_for_recruitment                                                                                                                                                                                                                                                                                                                     cv  experience_years                                                                   keywords_from_applicants   result                                                                    reason_for_result
+2023-12-16 00:00:00        QA Engineer                   Design and execute automated and manual tests to ensure software quality.       2+ years experience in software testing, proficiency in Selenium or Cypress. ['Selenium' 'Cypress' 'Testing' 'Automation' 'Bug Tracking']                                                                               Experienced candidate applying for QA Engineer. Over 1 years working in dynamic environments. Proficient in Testing, Cypress, Automation, Selenium. I am a fast learner and eager to grow my skills to meet the challenges of this role.                 1                                              ['Testing' 'Cypress' 'Automation' 'Selenium'] Accepted                  Applicant meets all requirements and shows strong domain knowledge.
+2022-12-22 00:00:00    DevOps Engineer Implement and maintain CI/CD pipelines, monitor system performance, and ensure reliability.             3+ years experience in DevOps, proficiency with AWS/Azure, Kubernetes.   ['AWS' 'Kubernetes' 'CI/CD' 'Jenkins' 'Terraform' 'Linux'] Highly motivated professional seeking the DevOps Engineer position. I bring 9 years of hands-on experience in the field. My core competencies include: CI/CD, Linux, Kubernetes, Terraform, Jenkins, Data Analysis, Leadership, Ruby. I am confident that my extensive experience makes me an ideal fit for this role.                 9 ['CI/CD' 'Linux' 'Kubernetes' 'Terraform' 'Jenkins' 'Data Analysis'\n 'Leadership' 'Ruby'] Accepted                  Applicant meets all requirements and shows strong domain knowledge.
+2021-02-01 00:00:00    Product Manager                      Lead cross-functional teams to deliver high-quality software products. 4+ years experience in product management, agile methodologies, strong leadership.          ['Agile' 'Scrum' 'Roadmapping' 'Leadership' 'Jira']                                                Experienced candidate applying for Product Manager. Over 2 years working in dynamic environments. Proficient in Leadership, Scrum, Jira, Agile, Public Speaking, Leadership, React. While I am building my experience, my passion and dedication will drive my success.                 2             ['Leadership' 'Scrum' 'Jira' 'Agile' 'Public Speaking' 'Leadership'\n 'React'] Rejected                                         Lacks the minimum required experience years.
+2023-01-04 00:00:00         Accountant                                     Manage financial records, auditing, and tax compliance.                               CPA or equivalent, 3+ years in corporate accounting.  ['Excel' 'Auditing' 'Tax Compliance' 'Financial Reporting']                                                   Results-driven individual targeting a Accountant role. I have 8 years of relevant industry experience and strong expertise in Excel, Financial Reporting, Public Speaking. I have successfully led projects and delivered results that align with your requirements.                 8                                          ['Excel' 'Financial Reporting' 'Public Speaking'] Rejected                   Unable to provide satisfactory references from previous employers.
+2022-11-15 00:00:00 Frontend Developer         Build responsive and interactive web interfaces using modern JavaScript frameworks.     Bachelor's in CS, 2+ years experience with React or Vue.js, strong CSS skills.    ['JavaScript' 'React' 'Vue.js' 'CSS' 'HTML' 'TypeScript']                                                                  Results-driven individual targeting a Frontend Developer role. I have 6 years of relevant industry experience and strong expertise in CSS, HTML, Vue.js, JavaScript. I am confident that my extensive experience makes me an ideal fit for this role.                 6                                                       ['CSS' 'HTML' 'Vue.js' 'JavaScript'] Accepted Impressive portfolio and previous project experience perfectly align with our needs.
+
+--- POSSIBLE IDENTIFIER COLUMNS ---
+No obvious identifier columns
+
+--- POSSIBLE MODEL TARGET COLUMNS ---
+No obvious target columns
+
+[LOADED] applications: 392 rows x 5 columns
+
+==========================================================================================
+DATASET: applications
+==========================================================================================
+Rows: 392
+Columns: 5
+Duplicate rows: 0
+Memory usage: 0.03 MB
+
+--- COLUMN INFORMATION ---
+
+Column: id
+  Type: int64
+  Missing: 0 (0.00%)
+  Unique values: 392
+  Possible role: POSSIBLE_IDENTIFIER
+
+Column: job_id
+  Type: int64
+  Missing: 0 (0.00%)
+  Unique values: 70
+  Possible role: POSSIBLE_IDENTIFIER
+
+Column: applicant_id
+  Type: int64
+  Missing: 0 (0.00%)
+  Unique values: 160
+  Possible role: POSSIBLE_IDENTIFIER
+
+Column: applied_at
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 392
+  Possible role: OTHER_FEATURE
+
+Column: source
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 4
+  Possible role: OTHER_FEATURE
+  Value distribution:
+    job_board: 240
+    company_site: 70
+    referral: 55
+    recruiter: 27
+
+--- NUMERIC STATISTICS ---
+               id      job_id  applicant_id
+count  392.000000  392.000000    392.000000
+mean   196.500000   35.339286    101.137755
+std    113.304898   20.812393     56.781057
+min      1.000000    1.000000      1.000000
+25%     98.750000   18.000000     50.000000
+50%    196.500000   34.000000    102.000000
+75%    294.250000   55.000000    146.000000
+max    392.000000   70.000000    200.000000
+
+--- FIRST 5 ROWS ---
+ id  job_id  applicant_id          applied_at       source
+  1      62           187 2025-06-13 14:07:54    job_board
+  2      24            69 2025-05-29 12:52:59 company_site
+  3      42           126 2025-03-05 16:01:42    job_board
+  4      69           128 2025-06-08 11:45:55    job_board
+  5      19            67 2025-05-06 14:57:35    job_board
+
+--- POSSIBLE IDENTIFIER COLUMNS ---
+id, job_id, applicant_id
+
+--- POSSIBLE MODEL TARGET COLUMNS ---
+No obvious target columns
+
+[LOADED] applicants: 200 rows x 7 columns
+
+==========================================================================================
+DATASET: applicants
+==========================================================================================
+Rows: 200
+Columns: 7
+Duplicate rows: 0
+Memory usage: 0.02 MB
+
+--- COLUMN INFORMATION ---
+
+Column: id
+  Type: int64
+  Missing: 0 (0.00%)
+  Unique values: 200
+  Possible role: POSSIBLE_IDENTIFIER
+
+Column: first_name
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 194
+  Possible role: OTHER_FEATURE
+
+Column: last_name
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 164
+  Possible role: OTHER_FEATURE
+
+Column: email
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 200
+  Possible role: OTHER_FEATURE
+
+Column: city
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 22
+  Possible role: OTHER_FEATURE
+
+Column: years_experience
+  Type: int64
+  Missing: 0 (0.00%)
+  Unique values: 26
+  Possible role: EXPERIENCE
+
+Column: joined_on
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 176
+  Possible role: OTHER_FEATURE
+
+--- NUMERIC STATISTICS ---
+               id  years_experience
+count  200.000000        200.000000
+mean   100.500000          8.625000
+std     57.879185          7.621338
+min      1.000000          0.000000
+25%     50.750000          1.000000
+50%    100.500000          7.000000
+75%    150.250000         14.250000
+max    200.000000         25.000000
+
+--- FIRST 5 ROWS ---
+ id first_name last_name                         email          city  years_experience  joined_on
+  1      Jacky     Swift     jacky.swift95@example.com     Charlotte                 1 2024-03-20
+  2     Raquel   Stroman  raquel_stroman21@example.net      New York                 8 2024-03-03
+  3       Ally Bergstrom    ally_bergstrom@example.org   Los Angeles                 7 2024-06-16
+  4     Anissa      Feil       anissa_feil@example.org San Francisco                 4 2023-03-04
+  5  Florencio     Blick florencio_blick79@example.com        Denver                 0 2023-10-01
+
+--- POSSIBLE IDENTIFIER COLUMNS ---
+id
+
+--- POSSIBLE MODEL TARGET COLUMNS ---
+No obvious target columns
+
+[LOADED] jobs: 70 rows x 8 columns
+
+==========================================================================================
+DATASET: jobs
+==========================================================================================
+Rows: 70
+Columns: 8
+Duplicate rows: 0
+Memory usage: 0.01 MB
+
+--- COLUMN INFORMATION ---
+
+Column: id
+  Type: int64
+  Missing: 0 (0.00%)
+  Unique values: 70
+  Possible role: POSSIBLE_IDENTIFIER
+
+Column: company_id
+  Type: int64
+  Missing: 0 (0.00%)
+  Unique values: 20
+  Possible role: POSSIBLE_IDENTIFIER
+  Value distribution:
+    1: 20
+    2: 6
+    7: 5
+    12: 5
+    3: 5
+    24: 3
+    6: 3
+    13: 3
+    16: 3
+    14: 2
+    4: 2
+    23: 2
+    18: 2
+    10: 2
+    5: 2
+    22: 1
+    9: 1
+    17: 1
+    21: 1
+    20: 1
+
+Column: title
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 16
+  Possible role: OTHER_FEATURE
+  Value distribution:
+    Sales development rep: 8
+    Operations analyst: 6
+    DevOps engineer: 6
+    Recruiter: 6
+    Office manager: 5
+    Product manager: 5
+    Data analyst: 4
+    Product designer: 4
+    Technical writer: 4
+    Backend engineer: 4
+    Frontend engineer: 4
+    Customer success manager: 3
+    Marketing coordinator: 3
+    Accountant: 3
+    Financial controller: 3
+    Support specialist: 2
+
+Column: employment_type
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 3
+  Possible role: OTHER_FEATURE
+  Value distribution:
+    full_time: 47
+    contract: 12
+    part_time: 11
+
+Column: work_pattern
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 3
+  Possible role: OTHER_FEATURE
+  Value distribution:
+    hybrid: 28
+    remote: 23
+    onsite: 19
+
+Column: salary_min
+  Type: int64
+  Missing: 0 (0.00%)
+  Unique values: 70
+  Possible role: SALARY_INFORMATION
+
+Column: salary_max
+  Type: int64
+  Missing: 0 (0.00%)
+  Unique values: 70
+  Possible role: SALARY_INFORMATION
+
+Column: posted_on
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 54
+  Possible role: OTHER_FEATURE
+
+--- NUMERIC STATISTICS ---
+              id  company_id     salary_min     salary_max
+count  70.000000   70.000000      70.000000      70.000000
+mean   35.500000    7.942857   68646.528571   97672.171429
+std    20.351085    7.444258   33753.340764   40690.399811
+min     1.000000    1.000000   32000.000000   38110.000000
+25%    18.250000    1.000000   34876.000000   64751.750000
+50%    35.500000    5.500000   65628.000000   89830.000000
+75%    52.750000   13.000000   95063.500000  134575.750000
+max    70.000000   24.000000  132614.000000  172683.000000
+
+--- FIRST 5 ROWS ---
+ id  company_id              title employment_type work_pattern  salary_min  salary_max  posted_on
+  1           2     Office manager       full_time       remote       39923      108373 2025-04-18
+  2           1 Operations analyst       full_time       onsite       85980       89892 2025-02-18
+  3          24       Data analyst       full_time       hybrid       83747      134377 2025-05-28
+  4           6   Product designer       full_time       hybrid      123131      155529 2025-05-18
+  5           1   Technical writer       full_time       hybrid       38113       66622 2025-05-29
+
+--- POSSIBLE IDENTIFIER COLUMNS ---
+id, company_id
+
+--- POSSIBLE MODEL TARGET COLUMNS ---
+No obvious target columns
+
+[LOADED] application_stages: 493 rows x 7 columns
+
+==========================================================================================
+DATASET: application_stages
+==========================================================================================
+Rows: 493
+Columns: 7
+Duplicate rows: 0
+Memory usage: 0.04 MB
+
+--- COLUMN INFORMATION ---
+
+Column: id
+  Type: int64
+  Missing: 0 (0.00%)
+  Unique values: 493
+  Possible role: POSSIBLE_IDENTIFIER
+
+Column: application_id
+  Type: int64
+  Missing: 0 (0.00%)
+  Unique values: 185
+  Possible role: POSSIBLE_IDENTIFIER
+
+Column: stage
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 5
+  Possible role: RECRUITMENT_STATUS_OR_OUTCOME
+  Value distribution:
+    screened: 185
+    interview_1: 132
+    interview_2: 89
+    offer: 61
+    hired: 26
+
+Column: entered_at
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 493
+  Possible role: OTHER_FEATURE
+
+Column: interview_format
+  Type: str
+  Missing: 272 (55.17%)
+  Unique values: 3
+  Possible role: OTHER_FEATURE
+  Value distribution:
+    nan: 272
+    video: 108
+    phone: 68
+    onsite: 45
+
+Column: panel_size
+  Type: float64
+  Missing: 272 (55.17%)
+  Unique values: 4
+  Possible role: OTHER_FEATURE
+  Value distribution:
+    nan: 272
+    1.0: 81
+    2.0: 77
+    3.0: 40
+    4.0: 23
+
+Column: score
+  Type: float64
+  Missing: 272 (55.17%)
+  Unique values: 5
+  Possible role: OTHER_FEATURE
+  Value distribution:
+    nan: 272
+    2.0: 53
+    4.0: 52
+    3.0: 48
+    1.0: 35
+    5.0: 33
+
+--- NUMERIC STATISTICS ---
+               id  application_id  panel_size       score
+count  493.000000      493.000000  221.000000  221.000000
+mean   247.000000      203.002028    2.022624    2.977376
+std    142.461106      111.977667    0.983701    1.308863
+min      1.000000        1.000000    1.000000    1.000000
+25%    124.000000      109.000000    1.000000    2.000000
+50%    247.000000      198.000000    2.000000    3.000000
+75%    370.000000      306.000000    3.000000    4.000000
+max    493.000000      392.000000    4.000000    5.000000
+
+--- FIRST 5 ROWS ---
+ id  application_id       stage          entered_at interview_format  panel_size  score
+  1             256    screened 2025-05-28 15:08:48              NaN         NaN    NaN
+  2             174    screened 2025-05-28 22:30:35              NaN         NaN    NaN
+  3             118    screened 2025-03-29 18:31:17              NaN         NaN    NaN
+  4             218    screened 2025-03-13 03:12:00              NaN         NaN    NaN
+  5             174 interview_1 2025-06-04 01:46:24            phone         1.0    5.0
+
+--- POSSIBLE IDENTIFIER COLUMNS ---
+id, application_id
+
+--- POSSIBLE MODEL TARGET COLUMNS ---
+stage
+
+[LOADED] companies: 25 rows x 4 columns
+
+==========================================================================================
+DATASET: companies
+==========================================================================================
+Rows: 25
+Columns: 4
+Duplicate rows: 0
+Memory usage: 0.00 MB
+
+--- COLUMN INFORMATION ---
+
+Column: id
+  Type: int64
+  Missing: 0 (0.00%)
+  Unique values: 25
+  Possible role: POSSIBLE_IDENTIFIER
+
+Column: name
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 25
+  Possible role: OTHER_FEATURE
+
+Column: size_band
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 4
+  Possible role: OTHER_FEATURE
+  Value distribution:
+    51-200: 10
+    11-50: 8
+    201-1000: 5
+    1-10: 2
+
+Column: hq_city
+  Type: str
+  Missing: 0 (0.00%)
+  Unique values: 12
+  Possible role: OTHER_FEATURE
+  Value distribution:
+    Boston: 4
+    Atlanta: 4
+    New York: 3
+    Los Angeles: 3
+    Dallas: 2
+    Houston: 2
+    Phoenix: 2
+    Seattle: 1
+    Miami: 1
+    Portland: 1
+    Philadelphia: 1
+    Chicago: 1
+
+--- NUMERIC STATISTICS ---
+              id
+count  25.000000
+mean   13.000000
+std     7.359801
+min     1.000000
+25%     7.000000
+50%    13.000000
+75%    19.000000
+max    25.000000
+
+--- FIRST 5 ROWS ---
+ id                        name size_band  hq_city
+  1       Bogan, Russel and Fay  201-1000  Seattle
+  2             Glover and Sons  201-1000   Dallas
+  3               Wisozk - Beer      1-10   Boston
+  4                  Harber LLC     11-50 New York
+  5 Weissnat, Steuber and Runte    51-200  Houston
+
+--- POSSIBLE IDENTIFIER COLUMNS ---
+id
+
+--- POSSIBLE MODEL TARGET COLUMNS ---
+No obvious target columns
+
+
+##########################################################################################
+CROSS-DATASET RELATIONSHIP ANALYSIS
+##########################################################################################
+
+applications <-> applicants
+Common columns: ['id']
+Key: id
+  Unique values in applications: 392
+  Unique values in applicants: 200
+  Matching values: 200
+
+applications <-> jobs
+Common columns: ['id']
+Key: id
+  Unique values in applications: 392
+  Unique values in jobs: 70
+  Matching values: 70
+
+applications <-> application_stages
+Common columns: ['id']
+Key: id
+  Unique values in applications: 392
+  Unique values in application_stages: 493
+  Matching values: 392
+
+jobs <-> companies
+Common columns: ['id']
+Key: id
+  Unique values in jobs: 70
+  Unique values in companies: 25
+  Matching values: 25
+
+
+##########################################################################################
+EMPLOYER-CANDIDATE PROPENSITY MODEL READINESS
+##########################################################################################
+
+Dataset: candidate_matching_resumes
+Shortlist-related columns: []
+Selection-related columns: []
+Application-related columns: []
+Warning: no obvious shortlist or final selection target detected.
+
+Dataset: recruitment_data_train
+Shortlist-related columns: []
+Selection-related columns: []
+Application-related columns: []
+Warning: no obvious shortlist or final selection target detected.
+
+Dataset: recruitment_data_test
+Shortlist-related columns: []
+Selection-related columns: []
+Application-related columns: []
+Warning: no obvious shortlist or final selection target detected.
+
+Dataset: applications
+Shortlist-related columns: []
+Selection-related columns: []
+Application-related columns: []
+Warning: no obvious shortlist or final selection target detected.
+
+Dataset: applicants
+Shortlist-related columns: []
+Selection-related columns: []
+Application-related columns: []
+Warning: no obvious shortlist or final selection target detected.
+
+Dataset: jobs
+Shortlist-related columns: []
+Selection-related columns: []
+Application-related columns: []
+Warning: no obvious shortlist or final selection target detected.
+
+Dataset: application_stages
+Shortlist-related columns: []
+Selection-related columns: []
+Application-related columns: ['application_id']
+Warning: no obvious shortlist or final selection target detected.
+
+Dataset: companies
+Shortlist-related columns: []
+Selection-related columns: []
+Application-related columns: []
+Warning: no obvious shortlist or final selection target detected.
+
+IMPORTANT:
+- Application, click, bookmark, and interview activity do not automatically represent a shortlist outcome.
+- Verify the actual meaning of every outcome/status column before using it as a target.
+- Do not use information recorded after a recruitment decision as model input.
+- Synthetic data can test the pipeline but cannot establish real-world shortlisting probabilities.
+- A calibrated propensity score requires representative historical outcomes.
+
+
+==========================================================================================
+ANALYSIS SUMMARY
+==========================================================================================
+Successfully loaded: 8 / 8 datasets
+candidate_matching_resumes: 10,000 rows, 9 columns
+recruitment_data_train: 8,000 rows, 10 columns
+recruitment_data_test: 2,000 rows, 10 columns
+applications: 392 rows, 5 columns
+applicants: 200 rows, 7 columns
+jobs: 70 rows, 8 columns
+application_stages: 493 rows, 7 columns
+companies: 25 rows, 4 columns

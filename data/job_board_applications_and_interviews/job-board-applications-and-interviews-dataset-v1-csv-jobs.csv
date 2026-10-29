@@ -1,0 +1,71 @@
+id,company_id,title,employment_type,work_pattern,salary_min,salary_max,posted_on
+1,2,Office manager,full_time,remote,39923,108373,2025-04-18
+2,1,Operations analyst,full_time,onsite,85980,89892,2025-02-18
+3,24,Data analyst,full_time,hybrid,83747,134377,2025-05-28
+4,6,Product designer,full_time,hybrid,123131,155529,2025-05-18
+5,1,Technical writer,full_time,hybrid,38113,66622,2025-05-29
+6,7,Technical writer,contract,onsite,127026,134642,2025-05-25
+7,6,Sales development rep,part_time,hybrid,34391,49957,2025-03-07
+8,13,Product designer,full_time,remote,130480,139746,2025-03-22
+9,2,Office manager,part_time,onsite,64192,88163,2025-02-25
+10,22,Customer success manager,full_time,onsite,77490,89768,2025-03-29
+11,16,Technical writer,contract,hybrid,36985,42129,2025-05-27
+12,14,Sales development rep,full_time,onsite,67866,120186,2025-05-03
+13,16,Data analyst,part_time,hybrid,34701,40554,2025-03-15
+14,1,Backend engineer,full_time,remote,32026,40016,2025-02-19
+15,2,DevOps engineer,contract,hybrid,32990,52116,2025-03-19
+16,9,Backend engineer,full_time,remote,34794,38171,2025-03-11
+17,6,Operations analyst,full_time,onsite,95647,145683,2025-02-14
+18,4,Marketing coordinator,full_time,onsite,49565,77389,2025-02-07
+19,12,Backend engineer,full_time,hybrid,129761,130242,2025-04-22
+20,7,Data analyst,contract,onsite,66504,66517,2025-03-16
+21,3,Marketing coordinator,full_time,remote,34424,81283,2025-02-15
+22,14,Product designer,full_time,remote,94948,95848,2025-04-23
+23,2,Customer success manager,full_time,onsite,33633,101822,2025-03-15
+24,3,DevOps engineer,contract,onsite,70719,84622,2025-05-12
+25,3,Accountant,full_time,remote,32056,81223,2025-03-04
+26,12,Operations analyst,part_time,onsite,33297,162622,2025-04-13
+27,2,Recruiter,contract,hybrid,32000,38110,2025-04-13
+28,1,Sales development rep,full_time,onsite,65336,65708,2025-03-09
+29,3,Product manager,full_time,remote,125295,148615,2025-04-03
+30,17,Product manager,full_time,hybrid,65362,71745,2025-04-10
+31,1,Operations analyst,part_time,hybrid,112561,158972,2025-02-14
+32,23,Customer success manager,full_time,hybrid,32272,115662,2025-05-01
+33,18,DevOps engineer,contract,hybrid,32008,44573,2025-05-08
+34,1,Frontend engineer,full_time,remote,101541,169451,2025-05-12
+35,21,Sales development rep,full_time,onsite,35122,87009,2025-05-07
+36,2,Sales development rep,full_time,remote,32355,59973,2025-05-20
+37,18,Recruiter,full_time,hybrid,38057,63083,2025-05-16
+38,13,Financial controller,full_time,onsite,65894,109246,2025-02-03
+39,1,Product manager,full_time,hybrid,105711,122628,2025-03-24
+40,20,Recruiter,contract,hybrid,132614,165926,2025-02-22
+41,1,Office manager,part_time,remote,32112,64436,2025-03-20
+42,7,Financial controller,full_time,hybrid,55316,140503,2025-02-26
+43,10,Operations analyst,full_time,remote,132468,171751,2025-02-17
+44,5,Sales development rep,full_time,hybrid,67681,68173,2025-04-19
+45,1,Operations analyst,part_time,remote,35859,64139,2025-02-15
+46,1,Support specialist,full_time,onsite,90755,137976,2025-05-20
+47,13,Office manager,full_time,remote,33269,61305,2025-05-21
+48,23,Frontend engineer,contract,remote,113035,120023,2025-02-19
+49,1,Accountant,full_time,hybrid,73536,83965,2025-03-25
+50,1,Technical writer,full_time,onsite,32723,61120,2025-03-26
+51,4,DevOps engineer,full_time,remote,85753,87360,2025-03-20
+52,24,DevOps engineer,contract,remote,123712,146549,2025-05-07
+53,1,Office manager,full_time,remote,82172,93255,2025-02-20
+54,16,Recruiter,full_time,remote,79585,114525,2025-04-25
+55,12,Support specialist,part_time,onsite,109410,172683,2025-05-21
+56,1,Sales development rep,contract,remote,38350,149087,2025-05-18
+57,1,Backend engineer,full_time,remote,101418,127979,2025-05-06
+58,1,Financial controller,full_time,hybrid,48946,52853,2025-03-26
+59,12,Product manager,contract,hybrid,32957,40304,2025-04-29
+60,24,Marketing coordinator,full_time,hybrid,37379,65699,2025-02-04
+61,1,Frontend engineer,full_time,remote,95102,95104,2025-03-31
+62,1,Recruiter,full_time,remote,66658,69628,2025-05-18
+63,5,Product designer,full_time,hybrid,73354,137583,2025-04-08
+64,7,Frontend engineer,part_time,onsite,114155,114985,2025-02-24
+65,12,Data analyst,full_time,hybrid,116178,136400,2025-03-08
+66,10,Recruiter,part_time,hybrid,64373,99310,2025-04-21
+67,1,Accountant,full_time,onsite,84535,165769,2025-02-15
+68,7,Product manager,full_time,hybrid,32138,42267,2025-05-27
+69,3,Sales development rep,full_time,hybrid,49395,71582,2025-05-25
+70,1,DevOps engineer,part_time,hybrid,42416,42546,2025-02-21

@@ -1,0 +1,69 @@
+input in swager
+{
+  "resume_text": "Python developer with 3 years of experience. Skilled in Python, SQL, Django, REST APIs, PostgreSQL, Docker and AWS. Developed backend applications and REST APIs.",
+  "job_description": "We are hiring a Python Backend Developer with 2+ years of experience. Required skills include Python, Django, REST API development, SQL, PostgreSQL, Docker and AWS.",
+  "experience_years": 3
+}
+
+for predict_hiring_propensity.py 
+candidate complete text resume 
+
+Name: John Smith
+Education: B.Tech Computer Science
+Experience: 2 years
+
+Skills:
+Python, SQL, Selenium, Cypress,
+Automation Testing, Jenkins
+
+Work Experience:
+Software Tester at ABC Technologies.
+Performed automation testing using Selenium
+and Cypress. Managed bugs and test cases.
+
+Projects:
+Automated web application testing
+using Python and Selenium.
+
+
+years of experiance
+
+JD:
+**Job Title:** Python Backend Developer
+
+**Company:** ABC Technologies
+
+**Job Type:** Full-Time
+
+**Experience Required:** 2–4 years
+
+**Job Description:**
+
+We are looking for a Python Backend Developer to design, develop, test, and maintain scalable backend applications. The ideal candidate should have strong Python programming skills and experience building REST APIs and working with databases.
+
+**Required Skills:**
+- Python
+- Django or Flask
+- REST API development
+- SQL and PostgreSQL
+- Git and GitHub
+- AWS or cloud deployment
+- Docker
+- Problem-solving and debugging
+
+**Responsibilities:**
+- Develop and maintain backend services using Python.
+- Build and integrate REST APIs.
+- Design and optimize database queries.
+- Write clean, reusable, and maintainable code.
+- Collaborate with frontend developers and QA teams.
+- Debug application issues and improve performance.
+- Participate in code reviews and technical discussions.
+
+**Education:** Bachelor's degree in Computer Science, Information Technology, or a related field.
+
+**Preferred Skills:**
+- Experience with FastAPI.
+- Knowledge of CI/CD pipelines.
+- Familiarity with microservices architecture.
+- Experience with automated testing.
